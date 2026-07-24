@@ -37,9 +37,19 @@ changeTextBtn.addEventListener('click', function() {
         changeTextBtn.classList.remove('clicked');
     }, 200);
 
-    // 다음 문구로 변경
-    currentIndex = (currentIndex + 1) % introductions.length;
+    // 랜덤으로 소개 문구 선택
+    currentIndex = Math.floor(Math.random() * introductions.length);
     updateText();
+    const colors = [
+    "#4a90e2",
+    "#28a745",
+    "#dc3545",
+    "#ff9800",
+    "#9c27b0"
+];
+
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+changeTextBtn.style.backgroundColor = randomColor;
 });
 
 // 텍스트 업데이트 함수
