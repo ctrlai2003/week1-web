@@ -50,6 +50,8 @@ changeTextBtn.addEventListener('click', function() {
 
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 changeTextBtn.style.backgroundColor = randomColor;
+changeTextBtn.style.color = "white";
+changeTextBtn.style.border = "none";
 });
 
 // 텍스트 업데이트 함수
